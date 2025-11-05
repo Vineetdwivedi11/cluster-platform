@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-username>/cluster-platform.git
+    repoURL: https://github.com/vineetdwivedi11/cluster-platform.git
     targetRevision: main
     path: apps/overlays/dev
   destination:
