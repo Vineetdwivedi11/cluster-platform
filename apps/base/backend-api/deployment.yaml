@@ -19,21 +19,18 @@ spec:
           image: ghcr.io/vineetdwivedi11/backend-api:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8000
-          envFrom:
-            - configMapRef:
-                name: backend-api-config
+            - containerPort: 80
           readinessProbe:
             httpGet:
               path: /health
-              port: 8000
-            initialDelaySeconds: 5
+              port: 80
+            initialDelaySeconds: 10
             periodSeconds: 5
           livenessProbe:
             httpGet:
               path: /health
-              port: 8000
-            initialDelaySeconds: 10
+              port: 80
+            initialDelaySeconds: 20
             periodSeconds: 10
           resources:
             requests:
