@@ -24,14 +24,18 @@ spec:
             httpGet:
               path: /health
               port: 80
-            initialDelaySeconds: 20
-            periodSeconds: 5
+            initialDelaySeconds: 25
+            periodSeconds: 10
+            timeoutseconds: 5
+            failureThreshold: 6
           livenessProbe:
             httpGet:
               path: /health
               port: 80
             initialDelaySeconds: 40
-            periodSeconds: 10
+            periodSeconds: 15
+            timeoutseconds: 5
+            failureThreshold: 6
           resources:
             requests:
               cpu: 100m
