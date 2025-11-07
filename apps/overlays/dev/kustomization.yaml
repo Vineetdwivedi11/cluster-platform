@@ -1,4 +1,4 @@
 resources:
+  - monitoring-app.yaml
   - redis-app.yaml
   - ../../base/backend-api
-  - ../../base/monitoring
