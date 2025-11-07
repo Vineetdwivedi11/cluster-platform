@@ -11,6 +11,10 @@ spec:
     targetRevision: 19.1.2
     helm:
       values: |
+        image:
+          repository: docker.io/bitnami/redis
+          tag: 7.2.5
+          pullPolicy: IfNotPresent
         architecture: standalone
         auth:
           enabled: false
