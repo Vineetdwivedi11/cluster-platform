@@ -1,9 +1,9 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
+resources:
+  - https://charts.bitnami.com/bitnami/redis
+
 helmCharts:
   - name: redis
-    repo: https://charts.bitnami.com/bitnami
     releaseName: redis
-    namespace: monitoring
-    version: 19.5.0
+    version: 19.1.2
+    repo: https://charts.bitnami.com/bitnami
     valuesFile: values.yaml
