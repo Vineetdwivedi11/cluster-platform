@@ -10,7 +10,7 @@ spec:
     chart: kube-prometheus-stack
     targetRevision: 61.2.0
     helm:
-      skipCrds: true
+      skipCrds: true       # 👈 stops Helm from touching CRDs again
       values: |
         grafana:
           adminPassword: "admin"
